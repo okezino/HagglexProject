@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainnav"
+    app:startDestination="@id/welcomePage">
+
+    <fragment
+        android:id="@+id/welcomePage"
+        android:name="com.example.hagglexproject.WelcomePage"
+        android:label="fragment_welcome_page"
+        tools:layout="@layout/fragment_welcome_page" >
+        <action
+            android:id="@+id/action_welcomePage_to_createAccountPage"
+            app:destination="@id/createAccountPage" />
+        <action
+            android:id="@+id/action_welcomePage_to_dashBoardPage"
+            app:destination="@id/dashBoardPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/createAccountPage"
+        android:name="com.example.hagglexproject.CreateAccountPage"
+        android:label="fragment_create_account_page"
+        tools:layout="@layout/fragment_create_account_page" >
+        <action
+            android:id="@+id/action_createAccountPage_to_verificationPage"
+            app:destination="@id/verificationPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/dashBoardPage"
+        android:name="com.example.hagglexproject.DashBoardPage"
+        android:label="fragment_dash_board_page"
+        tools:layout="@layout/fragment_dash_board_page" />
+    <fragment
+        android:id="@+id/verificationPage"
+        android:name="com.example.hagglexproject.VerificationPage"
+        android:label="fragment_verification_page"
+        tools:layout="@layout/fragment_verification_page" >
+        <action
+            android:id="@+id/action_verificationPage_to_setUpCompletePage"
+            app:destination="@id/setUpCompletePage" />
+    </fragment>
+    <fragment
+        android:id="@+id/setUpCompletePage"
+        android:name="com.example.hagglexproject.SetUpCompletePage"
+        android:label="fragment_set_up_complete_page"
+        tools:layout="@layout/fragment_set_up_complete_page" >
+        <action
+            android:id="@+id/action_setUpCompletePage_to_dashBoardPage"
+            app:destination="@id/dashBoardPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/countrySearch"
+        android:name="com.example.hagglexproject.CountrySearch"
+        android:label="fragment_country_search"
+        tools:layout="@layout/fragment_country_search" />
+</navigation>

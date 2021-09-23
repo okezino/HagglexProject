@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout2"
+    android:background="@drawable/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateAccountPage">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_shape"
+        android:layout_marginTop="100dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <TextView
+            android:id="@+id/create_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="50dp"
+            android:text="Create a new Account"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <EditText
+            android:id="@+id/create_account_email_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="36dp"
+            android:backgroundTint="@color/black"
+            android:hint="Email Address"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/create_account" />
+
+        <EditText
+            android:id="@+id/create_account_password_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:backgroundTint="@color/black"
+            android:layout_marginTop="30dp"
+            android:hint="@string/password"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            app:layout_constraintTop_toBottomOf="@+id/create_account_email_et"
+            tools:layout_editor_absoluteX="30dp" />
+
+        <EditText
+            android:id="@+id/create_account_username_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:backgroundTint="@color/black"
+            android:layout_marginTop="30dp"
+            android:hint="Create a Username"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            app:layout_constraintTop_toBottomOf="@+id/create_account_password_et"
+            tools:layout_editor_absoluteX="30dp" />
+
+        <LinearLayout
+            android:id="@+id/create_account_phone_number_et"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/create_account_username_et">
+
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/create_account_ccp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <EditText
+                android:id="@+id/create_account_phone_number"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:maxLength="9"
+                android:layout_height="match_parent"
+                android:hint="@string/phone_number"
+                android:textSize="16sp"
+                android:textColorHint="@color/black"/>
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/create_account_referral_code_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:backgroundTint="@color/black"
+            android:layout_marginTop="30dp"
+            android:hint="Referral code(optional)"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            app:layout_constraintTop_toBottomOf="@+id/create_account_phone_number_et"
+            tools:layout_editor_absoluteX="30dp" />
+
+        <TextView
+            android:id="@+id/create_account_policy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:layout_marginHorizontal="30dp"
+            android:text="@string/privacy_policy"
+            app:layout_constraintTop_toBottomOf="@+id/create_account_referral_code_et"
+            tools:layout_editor_absoluteX="32dp" />
+
+        <TextView
+            android:id="@+id/create_account_sign_up_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:background="@drawable/signup_background"
+            android:gravity="center"
+            android:paddingVertical="15dp"
+            android:text="Sign Up"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/create_account_referral_code_et" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

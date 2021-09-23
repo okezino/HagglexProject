@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/dashBoardPage"
+        android:title="@string/home"
+        android:icon="@drawable/dashxml" />
+
+    <item
+
+        android:title="@string/wallet"
+        android:icon="@drawable/wallet" />
+
+    <item
+        android:title=""
+        android:icon="@drawable/otc" />
+
+    <item
+        android:title="@string/cryto"
+        android:icon="@drawable/crypto"/>
+
+    <item
+        android:title="@string/more"
+        android:icon="@drawable/more"/>
+</menu>

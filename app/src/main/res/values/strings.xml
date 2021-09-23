@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">HaggleXProject</string>
+    <string name="welcome_fragment_welcome">Welcome!</string>
+    <string name="password">Password (Min.8 Characters)</string>
+    <string name="log_in">LOG IN</string>
+    <string name="create_account">new User? Create a new Account</string>
+    <string name="phone_number">Enter Your Phone Number</string>
+    <string name="privacy_policy">By signing you agree to Hagglex terms and privacy policy</string>
+    <string name="verify_message">we just sent a verification code to your email,\n Please entar the code</string>
+    <string name="verify_me">VERIFY ME</string>
+    <string name="expire">This code will expire in 10min</string>
+    <string name="resend_code"><u><b>RESEND CODE</b></u></string>
+    <string name="setup">Setup Complete</string>
+    <string name="thank_you_msg">Thank You for setting up your Hagglex Account</string>
+    <string name="start_exploring">START EXPLORING</string>
+    <string name="home">Home</string>
+    <string name="wallet">Wallet</string>
+    <string name="cryto">Crytopsave</string>
+    <string name="more">More</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+</resources>
