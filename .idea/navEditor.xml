@@ -107,13 +107,13 @@
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="walletPage">
+                  <entry key="walletsPage">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="232" />
-                            <option name="y" value="-5" />
+                            <option name="x" value="238" />
+                            <option name="y" value="-96" />
                           </Point>
                         </option>
                       </LayoutPositions>

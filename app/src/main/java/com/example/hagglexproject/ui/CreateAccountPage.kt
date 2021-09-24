@@ -18,6 +18,7 @@ import com.example.hagglexproject.apolloClient
 import com.example.hagglexproject.databinding.FragmentCreateAccountPageBinding
 import com.example.hagglexproject.viewmodel.MainViewModel
 import com.example.type.PhoneNumberDetailsInput
+import com.google.android.material.snackbar.Snackbar
 
 
 class CreateAccountPage : Fragment() {
@@ -27,6 +28,9 @@ class CreateAccountPage : Fragment() {
     private val binding
      get() = _binding!!
 
+    companion object {
+        var userToken: String = ""
+    }
 
 
     override fun onCreateView(
@@ -41,7 +45,7 @@ class CreateAccountPage : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.createAccountSignUpBtn.setOnClickListener {
-            createUser()
+            createUser(view)
 
         }
 
@@ -49,7 +53,7 @@ class CreateAccountPage : Fragment() {
 
     }
 
-    fun createUser(){
+    fun createUser(view:View){
         var phoneNumber = PhoneNumberDetailsInput(binding.createAccountPhoneNumber.text.toString(),binding.createAccountCcp.defaultCountryName,binding.createAccountCcp.defaultCountryCode)
         var input : Input<PhoneNumberDetailsInput> = Input.fromNullable(phoneNumber)
         var createUserInput = com.example.type.CreateUserInput(binding.createAccountEmailEt.text.toString(),
@@ -72,7 +76,9 @@ class CreateAccountPage : Fragment() {
                         val action = CreateAccountPageDirections.actionCreateAccountPageToVerificationPage(
                             response.data!!.register!!.user.email, response.data!!.register!!.token)
                         viewMode.updateRegistrationToken(response.data!!.register!!.token)
+                        userToken = response.data!!.register!!.token
                         findNavController().navigate(action)
+                        Snackbar.make(view,"Account has been Created",Snackbar.LENGTH_LONG).show()
                         Log.d("Create User" , response.data!!.register!!.token )
                     }
                 }

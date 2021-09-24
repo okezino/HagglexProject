@@ -9,6 +9,7 @@
     tools:context=".ui.VerificationPage">
 
     <ImageView
+        android:id="@+id/verification_back_btn"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:src="@drawable/backarrow"
@@ -72,7 +73,7 @@
             android:layout_marginHorizontal="30dp"
             android:layout_marginTop="60dp"
             android:hint="Verification Code"
-            android:maxLength="1"
+            android:maxLines="1"
             android:textColorHint="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.75"

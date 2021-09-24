@@ -1,6 +1,7 @@
 package com.example.hagglexproject.ui
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -21,12 +22,11 @@ import com.example.type.VerifyUserInput
 import com.google.android.material.snackbar.Snackbar
 
 class VerificationPage : Fragment() {
-    private var _binding : FragmentVerificationPageBinding? = null
+    private var _binding: FragmentVerificationPageBinding? = null
     private val binding
         get() = _binding!!
 
-    private val args : VerificationPageArgs by navArgs()
-
+    private val args: VerificationPageArgs by navArgs()
 
 
     override fun onCreateView(
@@ -34,7 +34,7 @@ class VerificationPage : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        _binding = FragmentVerificationPageBinding.inflate(inflater,container,false)
+        _binding = FragmentVerificationPageBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -43,80 +43,93 @@ class VerificationPage : Fragment() {
 
         binding.verificationPageBtn.setOnClickListener {
 
-            var verifyUserInput = VerifyUserInput(binding.verificationPageCodeEt.text.toString().toInt())
+            val verifyUserInput =
+                VerifyUserInput(binding.verificationPageCodeEt.text.toString().toInt())
 
             apolloClient(args.token).mutate(VerifyUserMutation(Input.optional(verifyUserInput)))
-                .enqueue(object : ApolloCall.Callback<VerifyUserMutation.Data>(){
+                .enqueue(object : ApolloCall.Callback<VerifyUserMutation.Data>() {
                     override fun onResponse(response: Response<VerifyUserMutation.Data>) {
-                      response.data?.verifyUser?.token?.let {
-                          activity?.runOnUiThread {
-                              Snackbar.make(view,"Account Verified", Snackbar.LENGTH_LONG).show()
-                              findNavController().navigate(R.id.setUpCompletePage)
-                          }
-                      }
-
-                    response.errors?.get(0)?.message?.let {
                         response.data?.verifyUser?.token?.let {
                             activity?.runOnUiThread {
-                                Snackbar.make(view,"${response.errors?.get(0)?.message}", Snackbar.LENGTH_LONG).show()
+                                Snackbar.make(view, "Account Verified", Snackbar.LENGTH_LONG).show()
+                                findNavController().navigate(R.id.setUpCompletePage)
+                                Log.d("Verification Page", "Bearer ${args.token}")
+                            }
+                        }
+
+                        response.errors?.get(0)?.message?.let {
+                                activity?.runOnUiThread {
+                                    Snackbar.make(
+                                        view,
+                                        "${response.errors?.get(0)?.message}",
+                                        Snackbar.LENGTH_LONG
+                                    ).show()
+                                    Log.d("Verification Page", "Bearer ${args.token}")
 
                             }
                         }
                     }
-                    }
 
                     override fun onFailure(e: ApolloException) {
-                      e.printStackTrace()
+                        e.printStackTrace()
+                        Log.d("VERIFICATION", e.localizedMessage)
                     }
 
-                } )
-            findNavController().navigate(R.id.setUpCompletePage)
+                })
+
         }
 
         binding.verificationPageResendBtn.setOnClickListener {
-              val email = EmailInput(args.email)
+            val email = EmailInput(args.email)
 
 
-             apolloClient().query(ResendVerificationCodeQuery(Input.fromNullable(email)))
-                 .enqueue(
-                 object  : ApolloCall.Callback<ResendVerificationCodeQuery.Data>(){
-                     override fun onResponse(response: Response<ResendVerificationCodeQuery.Data>) {
+            apolloClient().query(ResendVerificationCodeQuery(Input.fromNullable(email)))
+                .enqueue(
+                    object : ApolloCall.Callback<ResendVerificationCodeQuery.Data>() {
+                        override fun onResponse(response: Response<ResendVerificationCodeQuery.Data>) {
 
-                         var result = response.data?.resendVerificationCode
+                            var result = response.data?.resendVerificationCode
 
-                         result?.let {
+                            result?.let {
 
-                             if(it){
-                                 activity?.runOnUiThread {
-                                     Snackbar.make(view,"Verification Link has been send",Snackbar.LENGTH_LONG).show()
-                                 }
-                             }else {
-                                 activity?.runOnUiThread {
-                                     Snackbar.make(view,"Try Again",Snackbar.LENGTH_LONG).show()
-                                 }
-                             }
+                                if (it) {
+                                    activity?.runOnUiThread {
+                                        Snackbar.make(
+                                            view,
+                                            "Verification Link has been send",
+                                            Snackbar.LENGTH_LONG
+                                        ).show()
+                                    }
+                                } else {
+                                    activity?.runOnUiThread {
+                                        Snackbar.make(view, "Try Again", Snackbar.LENGTH_LONG)
+                                            .show()
+                                    }
+                                }
 
-                         }
-
-
-
-                     }
-
-                     override fun onFailure(e: ApolloException) {
-                       e.printStackTrace()
-                     }
-
-                 }
-             )
+                            }
 
 
+                        }
 
+                        override fun onFailure(e: ApolloException) {
+                            e.printStackTrace()
+                        }
 
+                    }
+                )
+        }
 
-            //findNavController().navigate(R.id.setUpCompletePage)
+        binding.verificationBackBtn.setOnClickListener {
+            backButtonNavigation()
         }
 
 
+    }
+
+
+    fun backButtonNavigation(){
+        findNavController().navigate(R.id.createAccountPage)
     }
 
 }

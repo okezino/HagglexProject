@@ -7,7 +7,7 @@
         android:icon="@drawable/dashxml" />
 
     <item
-        android:id="@+id/walletPage"
+        android:id="@+id/walletsPage"
         android:title="@string/wallet"
         android:icon="@drawable/wallet" />
 

@@ -41,10 +41,12 @@
             app:destination="@id/setUpCompletePage" />
         <argument
             android:name="email"
-            app:argType="string" />
+            app:argType="string"
+            android:defaultValue="okezi003@gmail.com" />
         <argument
             android:name="token"
-            app:argType="string" />
+            app:argType="string"
+            android:defaultValue="abc" />
     </fragment>
     <fragment
         android:id="@+id/setUpCompletePage"
@@ -61,13 +63,13 @@
         android:label="fragment_country_search"
         tools:layout="@layout/fragment_more_page" />
     <fragment
-        android:id="@+id/walletPage"
-        android:name="com.example.hagglexproject.WalletPage"
-        android:label="fragment_wallet_page"
-        tools:layout="@layout/fragment_wallet_page" />
-    <fragment
         android:id="@+id/cryptoPage"
         android:name="com.example.hagglexproject.ui.CryptoPage"
         android:label="fragment_crypto_page"
         tools:layout="@layout/fragment_crypto_page" />
+    <fragment
+        android:id="@+id/walletsPage"
+        android:name="com.example.hagglexproject.ui.WalletsPage"
+        android:label="fragment_wallets_page"
+        tools:layout="@layout/fragment_wallets_page" />
 </navigation>

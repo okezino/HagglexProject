@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import com.example.hagglexproject.R
 
 
-class WalletPage : Fragment() {
+class WalletsPage : Fragment() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,7 +21,7 @@ class WalletPage : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_wallet_page, container, false)
+        return inflater.inflate(R.layout.fragment_wallets_page, container, false)
     }
 
 }

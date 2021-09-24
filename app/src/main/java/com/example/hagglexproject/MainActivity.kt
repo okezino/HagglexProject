@@ -27,6 +27,9 @@ class MainActivity : AppCompatActivity() {
 
             when (destination.id) {
                 R.id.dashBoardPage -> binding.activityBottomNav.visibility = View.VISIBLE
+                R.id.walletsPage -> binding.activityBottomNav.visibility = View.VISIBLE
+                R.id.cryptoPage -> binding.activityBottomNav.visibility = View.VISIBLE
+                R.id.countrySearch -> binding.activityBottomNav.visibility = View.VISIBLE
                 else -> binding.activityBottomNav.visibility = View.GONE
             }
         }

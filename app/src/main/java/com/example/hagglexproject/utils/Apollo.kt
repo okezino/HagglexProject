@@ -1,9 +1,11 @@
 package com.example.hagglexproject
 
-import android.content.Context
+
 import android.os.Looper
+import android.util.Log
 import com.apollographql.apollo.ApolloClient
 import com.apollographql.apollo.subscription.WebSocketSubscriptionTransport
+import com.example.hagglexproject.ui.CreateAccountPage
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.Response
@@ -32,13 +34,17 @@ fun apolloClient(authorizationHeader : String = " "): ApolloClient{
 
 }
 
-private  class AuthorizationInterceptor(val string : String) : Interceptor{
+   class AuthorizationInterceptor(val string : String) : Interceptor{
     override fun intercept(chain: Interceptor.Chain): Response {
         var request = chain.request().newBuilder()
-            .addHeader("Authorization", "Bearer $string")
+            .addHeader("Authorization", "Bearer ${CreateAccountPage.userToken}")
             .build()
 
         return chain.proceed(request)
     }
+
+       init {
+           Log.d("Authorization", "Bearer $string")
+       }
 
 }

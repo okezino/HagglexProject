@@ -26,10 +26,6 @@ class WelcomePage : Fragment() {
     private val viewModel : MainViewModel by activityViewModels()
 
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -43,6 +39,10 @@ class WelcomePage : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.welcomePageForgotPassword.setOnClickListener {
+            findNavController().navigate(R.id.verificationPage)
+        }
 
         binding.welcomePageCreateAccount.setOnClickListener {
             findNavController().navigate(R.id.createAccountPage)
