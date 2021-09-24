@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/welcomePage"
-        android:name="com.example.hagglexproject.WelcomePage"
+        android:name="com.example.hagglexproject.ui.WelcomePage"
         android:label="fragment_welcome_page"
         tools:layout="@layout/fragment_welcome_page" >
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/createAccountPage"
-        android:name="com.example.hagglexproject.CreateAccountPage"
+        android:name="com.example.hagglexproject.ui.CreateAccountPage"
         android:label="fragment_create_account_page"
         tools:layout="@layout/fragment_create_account_page" >
         <action
@@ -28,21 +28,27 @@
     </fragment>
     <fragment
         android:id="@+id/dashBoardPage"
-        android:name="com.example.hagglexproject.DashBoardPage"
+        android:name="com.example.hagglexproject.ui.DashBoardPage"
         android:label="fragment_dash_board_page"
         tools:layout="@layout/fragment_dash_board_page" />
     <fragment
         android:id="@+id/verificationPage"
-        android:name="com.example.hagglexproject.VerificationPage"
+        android:name="com.example.hagglexproject.ui.VerificationPage"
         android:label="fragment_verification_page"
         tools:layout="@layout/fragment_verification_page" >
         <action
             android:id="@+id/action_verificationPage_to_setUpCompletePage"
             app:destination="@id/setUpCompletePage" />
+        <argument
+            android:name="email"
+            app:argType="string" />
+        <argument
+            android:name="token"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/setUpCompletePage"
-        android:name="com.example.hagglexproject.SetUpCompletePage"
+        android:name="com.example.hagglexproject.ui.SetUpCompletePage"
         android:label="fragment_set_up_complete_page"
         tools:layout="@layout/fragment_set_up_complete_page" >
         <action
@@ -51,7 +57,17 @@
     </fragment>
     <fragment
         android:id="@+id/countrySearch"
-        android:name="com.example.hagglexproject.CountrySearch"
+        android:name="com.example.hagglexproject.ui.MorePage"
         android:label="fragment_country_search"
-        tools:layout="@layout/fragment_country_search" />
+        tools:layout="@layout/fragment_more_page" />
+    <fragment
+        android:id="@+id/walletPage"
+        android:name="com.example.hagglexproject.WalletPage"
+        android:label="fragment_wallet_page"
+        tools:layout="@layout/fragment_wallet_page" />
+    <fragment
+        android:id="@+id/cryptoPage"
+        android:name="com.example.hagglexproject.ui.CryptoPage"
+        android:label="fragment_crypto_page"
+        tools:layout="@layout/fragment_crypto_page" />
 </navigation>

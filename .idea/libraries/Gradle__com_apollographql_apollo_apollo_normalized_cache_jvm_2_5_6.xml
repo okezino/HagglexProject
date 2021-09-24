@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.apollographql.apollo:apollo-normalized-cache-jvm:2.5.6">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.apollographql.apollo/apollo-normalized-cache-jvm/2.5.6/67eca2b1cbc38f768fc3d6479dec25b18a5758af/apollo-normalized-cache-jvm-2.5.6.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.apollographql.apollo/apollo-normalized-cache-jvm/2.5.6/67983ae5bdfe07df4965c8cf6037db08a02267ea/apollo-normalized-cache-jvm-2.5.6-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.apollographql.apollo/apollo-normalized-cache-jvm/2.5.6/e12e5108ca77c580b44ee15c7f1b9d67f1f0305f/apollo-normalized-cache-jvm-2.5.6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

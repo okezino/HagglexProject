@@ -6,7 +6,7 @@
     android:background="@drawable/background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".WelcomePage">
+    tools:context=".ui.WelcomePage">
 
 
     <TextView
@@ -30,6 +30,8 @@
         android:layout_marginTop="36dp"
         android:backgroundTint="@color/white"
         android:hint="Email Address"
+        android:maxLines="1"
+        android:inputType="textEmailAddress"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,6 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
         android:layout_marginTop="72dp"
+        android:inputType="textPassword"
         android:backgroundTint="@color/white"
         android:hint="@string/password"
         android:textColorHint="@color/white"
@@ -77,6 +80,7 @@
         app:layout_constraintTop_toBottomOf="@+id/welcome_page_forgot_password" />
 
     <TextView
+        android:id="@+id/welcome_page_create_account"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"

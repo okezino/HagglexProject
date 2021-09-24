@@ -7,19 +7,22 @@
         android:icon="@drawable/dashxml" />
 
     <item
-
+        android:id="@+id/walletPage"
         android:title="@string/wallet"
         android:icon="@drawable/wallet" />
 
     <item
+
         android:title=""
         android:icon="@drawable/otc" />
 
     <item
+        android:id="@+id/cryptoPage"
         android:title="@string/cryto"
         android:icon="@drawable/crypto"/>
 
     <item
+        android:id="@+id/countrySearch"
         android:title="@string/more"
         android:icon="@drawable/more"/>
 </menu>
