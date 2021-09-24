@@ -15,6 +15,11 @@ import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.Response
 
+const val ALERT_TITLE = "ALERT"
+const val YES = "YES"
+const val NO = "NO"
+const val ALERT_MESSAGE = "Are You sure you want to logout"
+
 private var instance : ApolloClient? = null
 
 fun apolloClient(authorizationHeader : String = " "): ApolloClient{

@@ -74,6 +74,8 @@
             android:layout_marginTop="60dp"
             android:hint="Verification Code"
             android:maxLines="1"
+            android:backgroundTint="@color/black"
+            android:textColor="@color/black"
             android:textColorHint="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.75"

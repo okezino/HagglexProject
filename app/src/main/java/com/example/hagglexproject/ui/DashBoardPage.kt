@@ -1,5 +1,6 @@
 package com.example.hagglexproject.ui
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -16,10 +17,8 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2
-import com.example.hagglexproject.R
-import com.example.hagglexproject.SplashScreen
+import com.example.hagglexproject.*
 import com.example.hagglexproject.databinding.FragmentVerificationPageBinding
-import com.example.hagglexproject.generateMaterialDialog
 import com.example.hagglexproject.ui.adapter.MainRecyclerView
 import com.example.hagglexproject.ui.adapter.Viewpager
 import com.example.hagglexproject.viewmodel.MainViewModel
@@ -69,9 +68,6 @@ class DashBoardPage : Fragment() {
 
         compositePageTransformer.addTransformer(marginPageTransformer)
         compositePageTransformer.addTransformer { page, position ->
-//            val r: Float = 1 - kotlin.math.abs(position)
-//         page.translationX = 60f
-//         page.scaleY = 1 -(0.25f * abs(position))
             val r = 1 - abs(position)
             page.scaleY = 0.85f + r * 0.15f
 
@@ -86,12 +82,13 @@ class DashBoardPage : Fragment() {
 
         logout.setOnClickListener {
             generateMaterialDialog(
-                requireActivity(), "Alert", "Are You sure you want to logout",
-                "Yes", "No", { signout() },{}
+                requireActivity(), ALERT_TITLE, ALERT_MESSAGE,
+                YES, NO, { signout() },{}
             )
         }
 
         switch.setOnCheckedChangeListener(object : CompoundButton.OnCheckedChangeListener{
+            @SuppressLint("SetTextI18n")
             override fun onCheckedChanged(p0: CompoundButton?, p1: Boolean) {
                 if(p1){
                     amountdash.text = "#0.00"

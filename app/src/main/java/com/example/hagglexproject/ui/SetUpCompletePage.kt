@@ -30,7 +30,7 @@ class SetUpCompletePage : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.exploreBtn.setOnClickListener {
-            findNavController().navigate(R.id.dashBoardPage)
+            findNavController().navigate(R.id.action_setUpCompletePage_to_dashBoardPage)
         }
     }
 
