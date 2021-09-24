@@ -55,7 +55,9 @@
         tools:layout="@layout/fragment_set_up_complete_page" >
         <action
             android:id="@+id/action_setUpCompletePage_to_dashBoardPage"
-            app:destination="@id/dashBoardPage" />
+            app:destination="@id/dashBoardPage"
+            app:popUpTo="@id/mainnav"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/countrySearch"
@@ -72,4 +74,9 @@
         android:name="com.example.hagglexproject.ui.WalletsPage"
         android:label="fragment_wallets_page"
         tools:layout="@layout/fragment_wallets_page" />
+    <fragment
+        android:id="@+id/homePage"
+        android:name="com.example.hagglexproject.ui.HomePage"
+        android:label="fragment_home_page"
+        tools:layout="@layout/fragment_home_page" />
 </navigation>

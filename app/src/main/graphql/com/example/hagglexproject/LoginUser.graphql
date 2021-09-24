@@ -5,6 +5,7 @@ mutation LoginUser($data : LoginInput!){
         _id
         email
         phonenumber
+        username
       }
       token
     }

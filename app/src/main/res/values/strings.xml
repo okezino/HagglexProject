@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">HaggleXProject</string>
+    <string name="app_name">HaggleX</string>
     <string name="welcome_fragment_welcome">Welcome!</string>
     <string name="password">Password (Min.8 Characters)</string>
     <string name="log_in">LOG IN</string>
@@ -19,6 +19,7 @@
     <string name="more">More</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sign_up">Sign Up</string>
     <!-- TODO: Remove or change this placeholder text -->
 
 </resources>

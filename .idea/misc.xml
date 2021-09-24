@@ -3,14 +3,24 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/background_shape.xml" value="0.18385416666666668" />
+        <entry key="app/src/main/res/drawable/bluecircularbg.xml" value="0.18385416666666668" />
+        <entry key="app/src/main/res/drawable/btn_shape.xml" value="0.18385416666666668" />
+        <entry key="app/src/main/res/drawable/circularbg.xml" value="0.18385416666666668" />
+        <entry key="app/src/main/res/drawable/ic_baseline_notifications_24.xml" value="0.18385416666666668" />
+        <entry key="app/src/main/res/drawable/linethrough.xml" value="0.18385416666666668" />
         <entry key="app/src/main/res/layout/activity_spalsh_screen.xml" value="0.1503623188405797" />
         <entry key="app/src/main/res/layout/fragment_country_search.xml" value="0.1503623188405797" />
         <entry key="app/src/main/res/layout/fragment_create_account_page.xml" value="0.1503623188405797" />
         <entry key="app/src/main/res/layout/fragment_crypto_page.xml" value="0.1503623188405797" />
+        <entry key="app/src/main/res/layout/fragment_dash_board_page.xml" value="0.1503623188405797" />
+        <entry key="app/src/main/res/layout/fragment_home_page.xml" value="0.1503623188405797" />
         <entry key="app/src/main/res/layout/fragment_verification_page.xml" value="0.1503623188405797" />
         <entry key="app/src/main/res/layout/fragment_wallet_page.xml" value="0.1503623188405797" />
         <entry key="app/src/main/res/layout/fragment_wallets_page.xml" value="0.1503623188405797" />
         <entry key="app/src/main/res/layout/fragment_welcome_page.xml" value="0.1503623188405797" />
+        <entry key="app/src/main/res/layout/item_viewpager.xml" value="0.1503623188405797" />
+        <entry key="app/src/main/res/layout/recyclerview_item.xml" value="0.1503623188405797" />
         <entry key="app/src/main/res/menu/bottom_menu.xml" value="0.16770833333333332" />
       </map>
     </option>

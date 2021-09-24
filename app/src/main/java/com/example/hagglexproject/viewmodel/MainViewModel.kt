@@ -12,6 +12,10 @@ class MainViewModel: ViewModel() {
     val id : LiveData<String>
         get() = _id
 
+    private var _userName : MutableLiveData<String> = MutableLiveData("SV")
+    val userName : LiveData<String>
+        get() = _userName
+
     private var _loginToken : MutableLiveData<String> = MutableLiveData()
     val loginToken : LiveData<String>
         get() = _loginToken
@@ -33,6 +37,10 @@ class MainViewModel: ViewModel() {
 
     fun updateRegistrationToken(token:String){
         _registerToken.value = token
+    }
+
+    fun updateUserName(userName:String){
+        _userName.value = userName
     }
 
 }

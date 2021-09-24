@@ -8,30 +8,39 @@
     android:layout_height="match_parent"
     tools:context=".ui.CreateAccountPage">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:background="@drawable/background_shape"
-            android:layout_marginTop="100dp"
+            android:layout_height="wrap_content"
             android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/background_shape"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" >
-
+            app:layout_constraintTop_toTopOf="parent">
             <TextView
                 android:id="@+id/create_account"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="30dp"
                 android:layout_marginTop="50dp"
-                android:text="Create a new Account"
                 android:gravity="center"
+                android:text="Create a new Account"
                 android:textColor="@color/black"
                 android:textSize="15sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
             <EditText
                 android:id="@+id/create_account_email_et"
                 android:layout_width="match_parent"
@@ -52,28 +61,30 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="30dp"
-                android:backgroundTint="@color/black"
                 android:layout_marginTop="30dp"
-                android:maxLines="1"
+                android:backgroundTint="@color/black"
                 android:hint="@string/password"
+                android:maxLines="1"
                 android:textColor="@color/black"
                 android:textColorHint="@color/black"
                 app:layout_constraintTop_toBottomOf="@+id/create_account_email_et"
                 tools:layout_editor_absoluteX="30dp" />
+
 
             <EditText
                 android:id="@+id/create_account_username_et"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="30dp"
-                android:backgroundTint="@color/black"
                 android:layout_marginTop="30dp"
-                android:maxLines="1"
+                android:backgroundTint="@color/black"
                 android:hint="Create a Username"
+                android:maxLines="1"
                 android:textColor="@color/black"
                 android:textColorHint="@color/black"
                 app:layout_constraintTop_toBottomOf="@+id/create_account_password_et"
                 tools:layout_editor_absoluteX="30dp" />
+
 
             <LinearLayout
                 android:id="@+id/create_account_phone_number_et"
@@ -96,13 +107,13 @@
                 <EditText
                     android:id="@+id/create_account_phone_number"
                     android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:layout_weight="2"
+                    android:hint="@string/phone_number"
                     android:maxLength="10"
                     android:maxLines="1"
-                    android:layout_height="match_parent"
-                    android:hint="@string/phone_number"
-                    android:textSize="16sp"
-                    android:textColorHint="@color/black"/>
+                    android:textColorHint="@color/black"
+                    android:textSize="16sp" />
 
             </LinearLayout>
 
@@ -111,23 +122,24 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="30dp"
-                android:backgroundTint="@color/black"
                 android:layout_marginTop="30dp"
-                android:maxLines="1"
+                android:backgroundTint="@color/black"
                 android:hint="Referral code(optional)"
+                android:maxLines="1"
                 android:textColor="@color/black"
                 android:textColorHint="@color/black"
                 app:layout_constraintTop_toBottomOf="@+id/create_account_phone_number_et"
                 tools:layout_editor_absoluteX="30dp" />
 
+
             <TextView
                 android:id="@+id/create_account_policy"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textSize="12sp"
                 android:layout_marginHorizontal="30dp"
+                android:gravity="center"
                 android:text="@string/privacy_policy"
+                android:textSize="12sp"
                 app:layout_constraintTop_toBottomOf="@+id/create_account_referral_code_et"
                 tools:layout_editor_absoluteX="32dp" />
 
@@ -136,22 +148,31 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="30dp"
+                android:layout_marginVertical="40dp"
                 android:background="@drawable/signup_background"
                 android:gravity="center"
                 android:paddingVertical="15dp"
-                android:text="Sign Up"
+                android:text="@string/sign_up"
                 android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/create_account_referral_code_et" />
 
+            <ProgressBar
+                android:id="@+id/create_account_progress_bar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/create_account_sign_up_btn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
+    </ScrollView>
 
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,6 +4,7 @@ mutation Register($data: CreateUserInput) {
       _id
       email
       phonenumber
+      username
     }
     token
   }
