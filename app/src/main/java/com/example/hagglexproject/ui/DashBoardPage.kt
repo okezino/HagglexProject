@@ -91,10 +91,10 @@ class DashBoardPage : Fragment() {
             @SuppressLint("SetTextI18n")
             override fun onCheckedChanged(p0: CompoundButton?, p1: Boolean) {
                 if(p1){
-                    amountdash.text = "#0.00"
+                    amountdash.text = "NG567.00"
 
                 }else {
-                    amountdash.text = "$****"
+                    amountdash.text = "$1:00"
                 }
             }
 
